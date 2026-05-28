@@ -1,23 +1,22 @@
 # Support
+This repository is not an end-user project this  is a port of Dynatrace Open Source ecosystem
+No formal support or SLA is provided for any version.
+## Getting Help
 
-## Support model
+1. GitHub Issues (Preferred)
+Use the issue tracker to:
 
-Describe how this repository is supported.
+* Report bugs
+* Ask questions
+* Propose enhancements
 
-Examples:
-- Community-supported by maintainers on a best-effort basis
-- Maintained by the owning team for internal or strategic use
-- Experimental project with limited support
+👉 https://github.com/dynatrace-oss/ebpf-common/issues
+When opening an issue, please include:
 
-## How to get help
-
-Please use GitHub Issues for:
-- bug reports
-- feature requests
-- general questions related to this repository
-
-If you believe you have found a security issue, do not file a public issue. Follow the instructions in `SECURITY.md`.
+Environment details (kernel version, distro, etc.)
+Steps to reproduce
+Expected vs. actual behavior
 
 ## Commercial support
 
-Unless explicitly stated otherwise, this repository is not covered by standard Dynatrace commercial support.
+Unless explicitly stated, no formal support or SLA is provided for any version.
