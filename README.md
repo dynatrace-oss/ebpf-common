@@ -6,13 +6,10 @@ This repository provides reusable building blocks used across Dynatrace eBPF pro
 
 ## 🚀 Overview
 
-eBPF (Extended Berkeley Packet Filter) allows running sandboxed programs directly in the Linux kernel, enabling efficient observability, networking, and security use cases without modifying kernel code 【3-b94533】.
-
 The **ebpf-common** library provides shared abstractions to:
 
 - Interact with eBPF programs and maps  
 - Handle kernel/user-space communication  
-- Normalize data structures and telemetry pipelines  
 - Support portability across different kernel versions  
 - Reduce duplication across multiple projects  
 
@@ -40,7 +37,7 @@ This library is intended to be used as a foundation for:
 - Service discovery systems  
 - Security and tracing solutions  
 
-Projects built on top of eBPF often rely on common components like this to handle low-level kernel integration efficiently 【1-11f557】.
+Projects built on top of eBPF often rely on common components like this to handle low-level kernel integration efficiently.
 
 ## 🛠️ Requirements
 
@@ -54,4 +51,5 @@ Typical requirements for building eBPF-based projects:
 ## 🔧 Build
 Simply add ebpf-common to your cmake structure
 
-```add_subdirectory(ebpf-common)
+```cmake
+add_subdirectory(ebpf-common)
