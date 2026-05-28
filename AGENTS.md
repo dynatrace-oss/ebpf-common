@@ -1,20 +1,14 @@
 # AGENTS.md
-
+This file provides guidance for automated agents (e.g., AI assistants, bots, or scripts) interacting with this repository.
 ## Purpose
 
-This repository is a template for creating new repositories in the `dynatrace-oss` organization.
+The ebpf-common repository contains shared components, helpers, and abstractions used by eBPF-based projects in the Dynatrace Open Source ecosystem. 
+Agents should prioritize correctness, safety, and minimal invasiveness when making changes.
+## General Guidelines
 
-Agents working in this repository should optimize for:
-- clear ownership
-- durable repository standards
-- minimal but useful baseline automation
-- documentation that is easy for maintainers to update after repository creation
-
-## What this repository is
-
-This repository is not an end-user project. It is a baseline template for maintainers creating new repositories.
-
-The root `README.md` should be treated as a maintainer setup guide. Changes should make the template easier to adopt, easier to review, and less likely to produce incomplete or unclear repositories.
+- Prefer small, focused changes over large refactorings.
+- Follow existing code style and structure.
+- Do not introduce unnecessary dependencies.
 
 ## Repository expectations
 
@@ -24,60 +18,20 @@ The root `README.md` should be treated as a maintainer setup guide. Changes shou
 - Use placeholder content only where maintainers are expected to replace it after creating a new repository from this template.
 - Make ownership, support, and publication expectations explicit.
 
-## Required baseline files
-
-Unless the task explicitly says otherwise, preserve or improve these files:
-
-- `README.md`
-- `LICENSE`
-- `CODEOWNERS`
-- `SUPPORT.md`
-- `.github/PULL_REQUEST_TEMPLATE.md`
-- `.github/dependabot.yml`
-- `.github/workflows/`
-- `.github/ISSUE_TEMPLATE/`
-- `AGENTS.md`
-- `.github/copilot-instructions.md`
-
-## Documentation guidance
-
-- Treat the root `README.md` as a maintainer setup guide for the template.
-- Prefer concrete, action-oriented instructions.
-- Prefer policy-style wording where expectations are mandatory.
-- Keep support and ownership language explicit.
-- Keep examples short and easy to copy into generated repositories.
-- Clearly mark placeholder values that must be replaced.
-
-## Workflow guidance
-
-Before proposing changes:
-- check whether ownership, support, or publication expectations are affected
-- preserve review-friendly workflows
-- avoid unnecessary complexity
-- avoid adding language-specific tooling unless it is broadly useful across most repositories created from this template
 
 ## Pull request guidance
 
 When preparing a pull request:
-- summarize what changed
-- explain why the change improves the template
-- call out any new maintainer actions required after repository creation
-- keep the scope focused and easy to review
+- Summarize what changed
+- Explain why the change improves the template
+- Call out any new maintainer actions required after repository creation
+- Keep the scope focused and easy to review
 
-## Review checklist
-
-When reviewing changes to this repository or repositories created from this template, verify that:
-
-- `CODEOWNERS` is present
-- support expectations are documented
-- placeholder text is clearly marked
-- no secrets or environment-specific values are included
-- baseline automation is present and understandable
-- maintainers can tell what must be updated before publication
+## Testing
+- This is not a standalone project. Tested should be projects that uses this project as a git submodule  
 
 ## What to avoid
 
-- Do not assume repositories created from this template are commercially supported.
-- Do not add heavy automation unless it is broadly useful.
-- Do not leave unclear placeholders that could accidentally ship to a public repository.
-- Do not optimize for a single language or stack unless the template is intentionally stack-specific.
+- Large-scale automated refactors
+- Style-only changes
+- Modifying licensing or legal files
